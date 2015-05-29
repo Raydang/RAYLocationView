@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		712927521B186FDB001390D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 712927511B186FDB001390D5 /* main.m */; };
+		712927551B186FDB001390D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 712927541B186FDB001390D5 /* AppDelegate.m */; };
+		712927581B186FDB001390D5 /* RAYLocationView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 712927561B186FDB001390D5 /* RAYLocationView.xcdatamodeld */; };
+		7129275B1B186FDB001390D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7129275A1B186FDB001390D5 /* ViewController.m */; };
+		7129275E1B186FDB001390D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7129275C1B186FDB001390D5 /* Main.storyboard */; };
+		712927601B186FDB001390D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7129275F1B186FDB001390D5 /* Images.xcassets */; };
+		712927631B186FDB001390D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712927611B186FDB001390D5 /* LaunchScreen.xib */; };
+		7129276F1B186FDB001390D5 /* RAYLocationViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7129276E1B186FDB001390D5 /* RAYLocationViewTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		712927691B186FDB001390D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 712927441B186FDB001390D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7129274B1B186FDB001390D5;
+			remoteInfo = RAYLocationView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7129274C1B186FDB001390D5 /* RAYLocationView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAYLocationView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		712927501B186FDB001390D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		712927511B186FDB001390D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		712927531B186FDB001390D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		712927541B186FDB001390D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		712927571B186FDB001390D5 /* RAYLocationView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RAYLocationView.xcdatamodel; sourceTree = "<group>"; };
+		712927591B186FDB001390D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7129275A1B186FDB001390D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7129275D1B186FDB001390D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7129275F1B186FDB001390D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		712927621B186FDB001390D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		712927681B186FDB001390D5 /* RAYLocationViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RAYLocationViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7129276D1B186FDB001390D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7129276E1B186FDB001390D5 /* RAYLocationViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAYLocationViewTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		712927491B186FDB001390D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		712927651B186FDB001390D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		712927431B186FDB001390D5 = {
+			isa = PBXGroup;
+			children = (
+				7129274E1B186FDB001390D5 /* RAYLocationView */,
+				7129276B1B186FDB001390D5 /* RAYLocationViewTests */,
+				7129274D1B186FDB001390D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7129274D1B186FDB001390D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7129274C1B186FDB001390D5 /* RAYLocationView.app */,
+				712927681B186FDB001390D5 /* RAYLocationViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7129274E1B186FDB001390D5 /* RAYLocationView */ = {
+			isa = PBXGroup;
+			children = (
+				712927531B186FDB001390D5 /* AppDelegate.h */,
+				712927541B186FDB001390D5 /* AppDelegate.m */,
+				712927591B186FDB001390D5 /* ViewController.h */,
+				7129275A1B186FDB001390D5 /* ViewController.m */,
+				7129275C1B186FDB001390D5 /* Main.storyboard */,
+				7129275F1B186FDB001390D5 /* Images.xcassets */,
+				712927611B186FDB001390D5 /* LaunchScreen.xib */,
+				712927561B186FDB001390D5 /* RAYLocationView.xcdatamodeld */,
+				7129274F1B186FDB001390D5 /* Supporting Files */,
+			);
+			path = RAYLocationView;
+			sourceTree = "<group>";
+		};
+		7129274F1B186FDB001390D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				712927501B186FDB001390D5 /* Info.plist */,
+				712927511B186FDB001390D5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7129276B1B186FDB001390D5 /* RAYLocationViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				7129276E1B186FDB001390D5 /* RAYLocationViewTests.m */,
+				7129276C1B186FDB001390D5 /* Supporting Files */,
+			);
+			path = RAYLocationViewTests;
+			sourceTree = "<group>";
+		};
+		7129276C1B186FDB001390D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7129276D1B186FDB001390D5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7129274B1B186FDB001390D5 /* RAYLocationView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 712927721B186FDB001390D5 /* Build configuration list for PBXNativeTarget "RAYLocationView" */;
+			buildPhases = (
+				712927481B186FDB001390D5 /* Sources */,
+				712927491B186FDB001390D5 /* Frameworks */,
+				7129274A1B186FDB001390D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RAYLocationView;
+			productName = RAYLocationView;
+			productReference = 7129274C1B186FDB001390D5 /* RAYLocationView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		712927671B186FDB001390D5 /* RAYLocationViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 712927751B186FDB001390D5 /* Build configuration list for PBXNativeTarget "RAYLocationViewTests" */;
+			buildPhases = (
+				712927641B186FDB001390D5 /* Sources */,
+				712927651B186FDB001390D5 /* Frameworks */,
+				712927661B186FDB001390D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7129276A1B186FDB001390D5 /* PBXTargetDependency */,
+			);
+			name = RAYLocationViewTests;
+			productName = RAYLocationViewTests;
+			productReference = 712927681B186FDB001390D5 /* RAYLocationViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		712927441B186FDB001390D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = richerpay;
+				TargetAttributes = {
+					7129274B1B186FDB001390D5 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					712927671B186FDB001390D5 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 7129274B1B186FDB001390D5;
+					};
+				};
+			};
+			buildConfigurationList = 712927471B186FDB001390D5 /* Build configuration list for PBXProject "RAYLocationView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 712927431B186FDB001390D5;
+			productRefGroup = 7129274D1B186FDB001390D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7129274B1B186FDB001390D5 /* RAYLocationView */,
+				712927671B186FDB001390D5 /* RAYLocationViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7129274A1B186FDB001390D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7129275E1B186FDB001390D5 /* Main.storyboard in Resources */,
+				712927631B186FDB001390D5 /* LaunchScreen.xib in Resources */,
+				712927601B186FDB001390D5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		712927661B186FDB001390D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		712927481B186FDB001390D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712927551B186FDB001390D5 /* AppDelegate.m in Sources */,
+				712927521B186FDB001390D5 /* main.m in Sources */,
+				7129275B1B186FDB001390D5 /* ViewController.m in Sources */,
+				712927581B186FDB001390D5 /* RAYLocationView.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		712927641B186FDB001390D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7129276F1B186FDB001390D5 /* RAYLocationViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7129276A1B186FDB001390D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7129274B1B186FDB001390D5 /* RAYLocationView */;
+			targetProxy = 712927691B186FDB001390D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7129275C1B186FDB001390D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7129275D1B186FDB001390D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		712927611B186FDB001390D5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				712927621B186FDB001390D5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		712927701B186FDB001390D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		712927711B186FDB001390D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		712927731B186FDB001390D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RAYLocationView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		712927741B186FDB001390D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RAYLocationView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		712927761B186FDB001390D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RAYLocationViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RAYLocationView.app/RAYLocationView";
+			};
+			name = Debug;
+		};
+		712927771B186FDB001390D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RAYLocationViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RAYLocationView.app/RAYLocationView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		712927471B186FDB001390D5 /* Build configuration list for PBXProject "RAYLocationView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				712927701B186FDB001390D5 /* Debug */,
+				712927711B186FDB001390D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		712927721B186FDB001390D5 /* Build configuration list for PBXNativeTarget "RAYLocationView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				712927731B186FDB001390D5 /* Debug */,
+				712927741B186FDB001390D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		712927751B186FDB001390D5 /* Build configuration list for PBXNativeTarget "RAYLocationViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				712927761B186FDB001390D5 /* Debug */,
+				712927771B186FDB001390D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		712927561B186FDB001390D5 /* RAYLocationView.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				712927571B186FDB001390D5 /* RAYLocationView.xcdatamodel */,
+			);
+			currentVersion = 712927571B186FDB001390D5 /* RAYLocationView.xcdatamodel */;
+			path = RAYLocationView.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 712927441B186FDB001390D5 /* Project object */;
+}
