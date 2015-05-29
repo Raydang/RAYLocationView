@@ -31,13 +31,13 @@
     __block UIBackgroundTaskIdentifier background_task;
     background_task = [application beginBackgroundTaskWithExpirationHandler:^{
         [application endBackgroundTask: background_task];
-        background_task = UIBackgroundTaskInvalid; }];
+        background_task = UIBackgroundTaskInvalid; }];          //beingBackgroundUpdateTask
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         while(TRUE) {
             [NSThread sleepForTimeInterval:1];
             //编写执行任务代码
         }
-        [application endBackgroundTask: background_task];
+        [application endBackgroundTask: background_task];       //endBackgroundUpdateTask
         background_task = UIBackgroundTaskInvalid;
     });
 
