@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711E1FAE1B1BFEF8000BF299 /* RAYLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711E1FAD1B1BFEF8000BF299 /* RAYLocationViewController.m */; };
 		712927521B186FDB001390D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 712927511B186FDB001390D5 /* main.m */; };
 		712927551B186FDB001390D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 712927541B186FDB001390D5 /* AppDelegate.m */; };
 		712927581B186FDB001390D5 /* RAYLocationView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 712927561B186FDB001390D5 /* RAYLocationView.xcdatamodeld */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		711E1FAC1B1BFEF8000BF299 /* RAYLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RAYLocationViewController.h; path = RAYLocationView/LocationView/RAYLocationViewController.h; sourceTree = "<group>"; };
+		711E1FAD1B1BFEF8000BF299 /* RAYLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RAYLocationViewController.m; path = RAYLocationView/LocationView/RAYLocationViewController.m; sourceTree = "<group>"; };
 		7129274C1B186FDB001390D5 /* RAYLocationView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAYLocationView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		712927501B186FDB001390D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		712927511B186FDB001390D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +65,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		711E1FAB1B1BFE40000BF299 /* LocationView */ = {
+			isa = PBXGroup;
+			children = (
+				711E1FAC1B1BFEF8000BF299 /* RAYLocationViewController.h */,
+				711E1FAD1B1BFEF8000BF299 /* RAYLocationViewController.m */,
+			);
+			name = LocationView;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		712927431B186FDB001390D5 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,7 @@
 		7129274E1B186FDB001390D5 /* RAYLocationView */ = {
 			isa = PBXGroup;
 			children = (
+				711E1FAB1B1BFE40000BF299 /* LocationView */,
 				712927531B186FDB001390D5 /* AppDelegate.h */,
 				712927541B186FDB001390D5 /* AppDelegate.m */,
 				712927591B186FDB001390D5 /* ViewController.h */,
@@ -224,6 +238,7 @@
 			files = (
 				712927551B186FDB001390D5 /* AppDelegate.m in Sources */,
 				712927521B186FDB001390D5 /* main.m in Sources */,
+				711E1FAE1B1BFEF8000BF299 /* RAYLocationViewController.m in Sources */,
 				7129275B1B186FDB001390D5 /* ViewController.m in Sources */,
 				712927581B186FDB001390D5 /* RAYLocationView.xcdatamodeld in Sources */,
 			);
@@ -420,6 +435,7 @@
 				712927741B186FDB001390D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		712927751B186FDB001390D5 /* Build configuration list for PBXNativeTarget "RAYLocationViewTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +444,7 @@
 				712927771B186FDB001390D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
