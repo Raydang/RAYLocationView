@@ -242,17 +242,20 @@
     double minLon=360.0f, maxLon=-360.0f;
     
     for (id<MKAnnotation> vu in annotations) {
-        if ( vu.coordinate.latitude  < minLat ) minLat = vu.coordinate.latitude;
-        if ( vu.coordinate.latitude  > maxLat ) maxLat = vu.coordinate.latitude;
-        if ( vu.coordinate.longitude < minLon ) minLon = vu.coordinate.longitude;
-        if ( vu.coordinate.longitude > maxLon ) maxLon = vu.coordinate.longitude;
+        if ( vu.coordinate.latitude  < minLat )
+            minLat = vu.coordinate.latitude;
+        if ( vu.coordinate.latitude  > maxLat )
+            maxLat = vu.coordinate.latitude;
+        if ( vu.coordinate.longitude < minLon )
+            minLon = vu.coordinate.longitude;
+        if ( vu.coordinate.longitude > maxLon )
+            maxLon = vu.coordinate.longitude;
     }
-    CLLocationCoordinate2D center = CLLocationCoordinate2DMake((minLat+maxLat)/2.0, (minLon+maxLon)/2.0);
-    MKCoordinateSpan span = MKCoordinateSpanMake(maxLat-minLat, maxLon-minLon);
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake((minLat + maxLat)/2.0, (minLon + maxLon)/2.0);
+    MKCoordinateSpan span = MKCoordinateSpanMake(maxLat - minLat, maxLon - minLon);
     MKCoordinateRegion region = MKCoordinateRegionMake (center, span);
     return region;
 }
-
 
 - (void)InitLocationManager {
     self.locationManager.delegate = self;
