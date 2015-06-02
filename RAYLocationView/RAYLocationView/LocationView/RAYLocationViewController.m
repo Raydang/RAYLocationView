@@ -17,7 +17,6 @@
 }
 
 @property (nonatomic, strong) MKMapView  *mapView; //高德地图
-
 @property (nonatomic, strong) CLLocationManager *locationManager;  //定位服务管理对象初始化
 
 @end
@@ -35,6 +34,7 @@
     
     self.mapView.frame = CGRectMake(20, 100, [[UIScreen mainScreen] bounds].size.width - 40 , 500);
     self.mapView.delegate = self;
+     self.mapView.showsUserLocation = NO;  //-(void) mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation ;
     [self.view addSubview:self.mapView];
 }
 
@@ -70,19 +70,22 @@
 //     didUpdateLocations:(NSArray *)locations {
 
 //    CLLocationCoordinate2D loc = [[locations lastObject] coordinate];
+    
+    
     CLLocationCoordinate2D loc = [newLocation coordinate];
     latitude  = [NSString stringWithFormat:@"%3.6f",loc.latitude];
-    longitude = [NSString stringWithFormat:@"%3.6f",loc.longitude];
+    longitude = [NSString stringWithFormat:@"%@",@"121.480100"];//loc.longitude];
     NSDictionary *dic = @{@"lat":latitude,@"long":longitude};
-    
+        NSLog(@"lat==%@,long==%@",latitude,longitude);
     for (NSDictionary *dictionary in pointArray) {
         if ([dic isEqualToDictionary:dictionary]) {
             [self.locationManager stopUpdatingLocation];
             return;
         }
     }
-//    [pointArray  addObject:dic];
+    [pointArray  addObject:dic];
     [self.locationManager stopUpdatingLocation];  //停止定位
+    
 
 }
 
@@ -115,6 +118,7 @@
 //            if ([[mapData valueForKey:Key_Title]isEqualToString:mkaview.annotation.title]) {
 //                if ([[mapData valueForKey:Key_Color]isEqualToString:@"green"]) {
                     mkaview.pinColor = MKPinAnnotationColorGreen;
+
 //        mkaview.draggable = YES;
 //        mkaview.selected = YES;
 //                }
@@ -129,6 +133,35 @@
     }
 }
 
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[MKPolyline class]])
+    {
+        MKPolylineView *lineview = [[MKPolylineView alloc] initWithOverlay:overlay] ;
+        lineview.strokeColor=[[UIColor redColor] colorWithAlphaComponent:0.5];
+        lineview.lineWidth = 4.0;
+        return lineview;
+    }
+    return nil;
+    
+}
+
+-(void) mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    NSString *lat=[[NSString alloc] initWithFormat:@"%f",userLocation.coordinate.latitude];
+    NSString *lng=[[NSString alloc] initWithFormat:@"%f",userLocation.coordinate.longitude];
+    NSLog(@"lat==%@,lng==%@",lat,lng);
+    
+    MKCoordinateSpan span;
+    MKCoordinateRegion region;
+    
+    span.latitudeDelta=0.010;
+    span.longitudeDelta=0.010;
+    region.span=span;
+    region.center=[userLocation coordinate];
+
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+}
+
 #pragma mark - event response
 
 #pragma mark - private methods
@@ -141,7 +174,6 @@
         }
     }
     
-
     [pointArray addObject:@{@"lat":@"31.41",@"long":@"121.4801"}];//121.48 31.41
     [pointArray addObject:@{@"lat":@"31.41",@"long":@"121.4819"}];//121.48 31.41
     
@@ -173,28 +205,52 @@
         _mCircle.title = @"上海";
         _mCircle.subtitle = @"宝山";
         [self.mapView addAnnotation:_mCircle];
-
+        [self.mapView selectAnnotation:_mCircle animated:YES];  //自动显示大头针的title
         return;
     }
     else {
         NSArray *array1 = @[@"beijing",@"shanghai",@"guangzhou",@"shenzhen"];
         NSArray *array2 = @[@"daxing",@"hongkou",@"dongguan",@"longkou"];
         CLLocationCoordinate2D pointAry[pointCount];
+        NSMutableArray *arrayPoint = [NSMutableArray array];
         
         for (int i = 0; i < pointCount; i++){
 
             pointAry[i] = CLLocationCoordinate2DMake([[pointArray[i] valueForKey:@"lat" ] doubleValue],[[pointArray[i] valueForKey:@"long" ] doubleValue]);
             MKCircle *_mCircle = [MKCircle circleWithCenterCoordinate:pointAry[i]
                                                            radius:10.0];
+            
+            [arrayPoint addObject:_mCircle];
             _mCircle.title = array1[i];
             _mCircle.subtitle = array2[i];
             [self.mapView addAnnotation:_mCircle];
-            
+
+        
         }
+
+        [self.mapView setRegion:[self regionForAnnotations:arrayPoint] animated:YES];
         MKPolyline *mpline = [MKPolyline polylineWithCoordinates:pointAry count:pointCount];
-        [self.mapView setVisibleMapRect:[mpline boundingMapRect]];
+        [self.mapView setVisibleMapRect:[mpline boundingMapRect] animated:YES];
         [self.mapView  addOverlay:mpline];
     }
+}
+- (MKCoordinateRegion) regionForAnnotations:(NSArray *)annotations {
+    NSAssert(annotations!=nil, @"annotations was nil");
+    NSAssert([annotations count]!=0, @"annotations was empty");
+    
+    double minLat=360.0f, maxLat=-360.0f;
+    double minLon=360.0f, maxLon=-360.0f;
+    
+    for (id<MKAnnotation> vu in annotations) {
+        if ( vu.coordinate.latitude  < minLat ) minLat = vu.coordinate.latitude;
+        if ( vu.coordinate.latitude  > maxLat ) maxLat = vu.coordinate.latitude;
+        if ( vu.coordinate.longitude < minLon ) minLon = vu.coordinate.longitude;
+        if ( vu.coordinate.longitude > maxLon ) maxLon = vu.coordinate.longitude;
+    }
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake((minLat+maxLat)/2.0, (minLon+maxLon)/2.0);
+    MKCoordinateSpan span = MKCoordinateSpanMake(maxLat-minLat, maxLon-minLon);
+    MKCoordinateRegion region = MKCoordinateRegionMake (center, span);
+    return region;
 }
 
 
